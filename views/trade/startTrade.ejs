@@ -1,0 +1,42 @@
+<%- include('../partials/header.ejs')%>
+<main >
+    <div class="form-container">
+        <% if(trades.length){ %>
+        <h3 >Your items available to trade :</h3>
+        
+        <form>
+            <table>
+                <tr>
+                    <th>Item</th>
+                    <th>Category</th>
+                    <th>Trading status</th>
+                    <th>Actions</th>
+                </tr>
+                <% trades.forEach(trade => { %>
+                    <%if(trade.Status==="Available"){%>
+                    <tr>
+                        <td><%= trade.title %></td>     
+                        <td><%= trade.Status %></td>
+                        <td><%= trade.category %></td> 
+                        <td>
+                            <form  method="get" >
+                              <button class="trade-btn" method ="GET" formaction="/trades/<%= trade.id%>/onTrading" type="submit">Trade Item</button>
+                            </form>
+                          </td>
+                    </tr>
+                    
+                    <%}%>
+        </br>
+        </label>
+        </br>
+        
+        <% }); %></form></table>
+        
+        
+    
+        <% } else { %>
+        <p>There are no items to display.</p>
+        <% } %>
+  </div>
+ </main>
+<%- include('../partials/footer.ejs')%>

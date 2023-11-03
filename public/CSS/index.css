@@ -1,0 +1,367 @@
+
+:root {
+  --primary-color: #008080;
+  --secondary-color: #FFA07A;
+  --text-color: #333333;
+  --tertiary-color : #F2A285;
+  --quaternary-color : #F2C1AE;
+  --white-color : White;
+  --black-color : black;
+}
+
+body{
+  background-color: rgb(152, 211, 251);
+  color: #000000;
+  font-size: medium;
+  font-family: sans-serif;
+  padding-top: 12%; 
+}
+
+.tradestyle {
+  margin: 20px; 
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #8e8bfa;
+  border: 1px solid #0b0a0a;
+}
+
+.butn{
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  background-color: #feae2e;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.butn:hover {
+  background-color: #af7c4c;
+}
+
+  
+
+.logo{
+    height: 90px;
+    padding-top: 10px;
+    padding-left: 25px;
+}
+nav {
+  width: 100%;
+  height: 160px;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #f78686;
+}
+
+.nav-bar {
+  display: flex;
+  list-style-type: none;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.nav-bar li{
+  padding-right: 15%;
+}
+.nav-bar button{
+  border-radius: 4px;
+  border-color: #decccc;
+  width: 100px;
+  margin-top: 5px;
+  padding: 5%;
+  background-color: aqua;
+  cursor: pointer;
+}
+.nav-bar button:hover{
+  color: white;
+  box-shadow: 0 0 0px #171414;
+  background-color: rgb(63, 67, 67);
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+a:hover {
+  text-decoration: underline 3px white;
+}
+.trades{
+  padding-left: 36px;
+}
+hr{
+  width: 100%;
+  border-right: 0;
+  border-left: 0;
+  border-width: 2;
+}
+p{
+  font-size: 15px;
+}
+
+.main{
+  text-align: center;
+}
+
+.footer {
+  position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #f78686;
+    color: white;
+    text-align: left;
+    justify-content: flex-start;
+}
+
+
+.trd{
+  padding-left: 30px;
+  
+}
+.trd button{
+  border-radius: 4px;
+  border-color: #fab8b8;
+  width: 100px;
+  padding: 5px;
+  background-color: aqua;
+  cursor: pointer;
+}
+.trd button:hover{
+  color: white;
+  box-shadow: 0 0 0px #171414;
+  background-color: rgb(63, 67, 67);
+}
+
+
+
+.main-grid img{
+  height: 150px;
+  width: 180px;
+}
+.main-grid { 
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-gap: 30px; 
+  width: 33.3%; 
+} 
+.child-grid{ 
+  margin: 20px; 
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #b8e7fa;
+  border: 1px solid #0b0a0a;
+}
+
+
+
+
+input[type=text], select, textarea {
+    width: 90%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+  
+  input[type=submit] {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  }
+  
+  input[type=submit]:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  .container {
+    border-radius: 5px;
+    background-color: #68fd8f;
+    padding: 5px;
+    border: 1px solid #0b0a0a;
+  }
+  
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+  
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+
+  .imgMain{
+      border-radius: 6px;
+      padding-top: 2%;
+      height: 200px;
+      width: 200px;
+  }
+  #wrapper {
+      margin-left: 15%;
+      display: flex;
+      margin-right: 15%
+  }
+  
+  #left {
+      flex: 0 0 30%;
+      padding-top: 4%;
+      
+  }
+  
+  #right {
+      flex: 1;
+      padding-top: 4%;
+  }
+  
+ 
+  .wrapper{
+    margin: 5% auto;
+     /* width: 400px; */
+  }
+  
+  ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  label{
+    display: block;
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid --quaternary-color;
+    border-bottom: none;
+  }
+  
+  label:hover{
+    background: var(--primary-color);
+  }
+  
+  label.last{
+    border-bottom: 1px solid var(--white-color)  ;
+  }
+  
+  ul ul li{
+    padding: 10px;
+    background: var(--primary-color);
+  }
+  
+  
+  input[type="checkbox"]{
+    position: absolute;
+    left: -9999px;
+  }
+  
+  input[type="checkbox"] ~ ul{
+    height: 0;
+    transform: scaleY(0);
+  }
+  
+  input[type="checkbox"]:checked ~ ul{
+    height: 100%;
+    transform-origin: top;
+    transition: transform .2s ease-out;
+    transform: scaleY(1); 
+  }
+  
+  input[type="checkbox"]:checked + label{
+    background: var(--secondary-color);
+    border-bottom: 1px solid var(--tertiary-color)  ;
+  }
+
+  .form-container {
+    display: flex;
+    background-color: #008080;
+    border-radius: 5px;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 500px;
+  }
+  #lastName {
+    border: 2px solid gray;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 16px;
+    width: 200px; /* adjust the width as needed */
+    outline: none;
+  }
+  #firstName {
+    border: 2px solid gray;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 16px;
+    width: 200px; /* adjust the width as needed */
+    outline: none;
+  }
+  #email {
+    border: 2px solid gray;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 16px;
+    width: 200px; /* adjust the width as needed */
+    outline: none;
+  }
+  #password {
+    border: 2px solid gray;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 16px;
+    width: 200px; /* adjust the width as needed */
+    outline: none;
+  }
+
+  .success {
+    background: rgba(4, 248, 17, 0.7);
+    color: #fff;
+    width: 98%;
+    text-align: center;
+    padding: 10px 10px;
+  }
+  
+  .error {
+    background: rgba(253, 4, 4, 0.7);
+    color: #fff;
+    width: 98%;
+    text-align: center;
+    padding: 10px 10px;
+  }
+  .trade-btn {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .watch-btn {
+    background-color: rgb(255, 16, 3);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }

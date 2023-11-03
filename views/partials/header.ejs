@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELT</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="https://static.vecteezy.com/system/resources/thumbnails/000/460/483/small/1403.i003.005.S.m004.c11.devices_emblem.jpg" >
+    <link rel="stylesheet" href="/CSS/index.css">
+      
+</head>
+<body>
+    <nav>
+
+        <a href="/"><img class="logo" src="https://static.vecteezy.com/system/resources/thumbnails/000/460/483/small/1403.i003.005.S.m004.c11.devices_emblem.jpg" alt="Logo"></a>
+        
+        <hr>
+        <ul class="nav-bar">
+            <a class="trd" href="/">Home</a>
+            <li></li>
+            <a class="trd" href="/trades">Trades</a>
+            <%if(!user) {%>
+                <li></li>
+                <li><a href="../trades/createTrade">Begin Trading</a></li>
+                <li><a href="/users/login"> Login </a></li>
+                <li><a href="/users/new">Signup</a></li>
+            <%} else {%>
+                <li></li>
+                <li><a href="../trades/createTrade">Begin Trading</a></li>
+                <li><a href='/users/profile'>Profile</a></li>
+                <li><a href="/users/logout">Logout</a></li>
+            <%}%>
+        </ul>
+        <hr>
+        
+        
+    </nav>
+    <% if(errorMessages.length > 0) {%>
+        <% errorMessages.forEach(message=>{%>
+            <div class='error'>
+                <%=message%>
+            </div>
+            <%});%>
+                <%}%>
+    
+                    <% if(successMessages.length > 0) {%>
+    
+                        <% successMessages.forEach(message=>{%>
+                            <div class='success'>
+                                <%=message%>
+                            </div>
+                            <%});%>
+                                <%}%>
+
+
+
+

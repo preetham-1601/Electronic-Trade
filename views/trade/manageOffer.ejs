@@ -1,0 +1,19 @@
+<%- include('../partials/header.ejs')%>
+<div class="form-container">
+<h1>Manage offer View</h1>
+<table>
+    <tr>
+      <th>Your trade</th>
+      <th>Offer trade</th>
+    </tr>
+    <tr>
+      <td> <a href="/trades/<%= trade.id%>"> <%= trade.title%></a> </td>
+      <td> <a href="/"> <%= trade.offerName%></td> </a>
+    </tr>
+  </table>
+  <div id = "form">
+    <form action='/trades/<%= trade.id%>/cancel?_method=delete' method="post">
+    <button class="trade-btn" type="submit">Cancel Offer</button>
+  </form>
+</div>
+<%- include('../partials/footer.ejs')%>

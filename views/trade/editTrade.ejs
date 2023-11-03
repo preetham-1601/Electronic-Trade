@@ -1,0 +1,44 @@
+<%- include('../partials/header.ejs')%>
+<div class = "form-container">
+    <h2>EDIT TRADE</h2>
+    <form method="post" action="/trades/<%= trade.id%>?_method=PUT">
+        <table>
+            <tr>
+                <td><label for="title" >Title</label></td>
+                <td><input type="text" id="title" name="title" value = "<%= trade.title%>" class = "fixed-width" minlength="3" maxlength="50"></td>
+            </tr>
+            <tr><td class = "align-top"><label for="details">Details</label></td>
+                <td><textarea rows="5" id="details" name="details" class = "fixed-width"><%= trade.details%></textarea></td>
+            </tr>
+            <tr>
+                <td><label for="title" >Category</label></td>
+                <td><input type="text" id="category" name="category" value = "<%= trade.category%>" class = "fixed-width"></td>
+            </tr>
+
+            <tr>
+                <td><label for="title" >Image link</label></td>
+                <td><input type="text" id="image" name="image" value = "<%= trade.image%>" class = "fixed-width"></td>
+            </tr>
+        </table> 
+        <button class="trade-btn" type="submit">Submit</button> 
+    </form>
+</div>
+<% if(errorMessages.length > 0) {%>
+    <% errorMessages.forEach(message=>{%>
+        <div class='error'>
+            <%=message%>
+        </div>
+        <%});%>
+            <%}%>
+
+                <% if(successMessages.length > 0) {%>
+
+                    <% successMessages.forEach(message=>{%>
+                        <div class='success'>
+                            <%=message%>
+                        </div>
+                        <%});%>
+                            <%}%>
+
+
+<%- include('../partials/footer.ejs')%>

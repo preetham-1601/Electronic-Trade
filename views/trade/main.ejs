@@ -1,0 +1,27 @@
+<%-include('../partials/header.ejs')%>
+<div>
+  <%if(trades.length){%>
+    <h2 id = "select">CATEGORIES</h2>
+    <%let setTrade = new Set();%> 
+    <%for(var i = 0; i<trades.length;i++){%>
+      <%setTrade.add(trades[i].category);%>
+      <%}%>
+      <%let catList = Array.from(setTrade);%>
+      <div class="tradestyle">
+        <%for(var i = 0;i<catList.length;i++){%>
+          <h4 class='child-grid'><%= catList[i]%></h4>
+          <%for(var j=0;j<trades.length;j++){%>
+            <%if(trades[j].category === catList[i]){%>
+              <ul>
+                <li style="padding-left: 4%;"><a href="/trades/<%= trades[j].id%>"><p><%= trades[j].title %></p></a></li>
+              </ul>
+            <%}%>
+          <%}%>
+        <%}%>
+      <%}else{%>
+        <p>There are no products to display</p>
+      <%}%>
+      </div>       
+</div>
+
+<%-include('../partials/footer.ejs')%>

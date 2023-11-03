@@ -1,0 +1,33 @@
+<%- include('../partials/header.ejs')%>
+    <div class = "form-container">
+        <div>
+            <p>Title: <%= trade.title%></p>
+            <p>Category : <%= trade.category%></p>
+            <p>Details : <%= trade.details%></p>
+            <p>Trading status : <%= trade.Status%></p>            
+            <img style="height: 250px;" alt="<%= trade.title%>" src="<%= trade.image%>">
+        </div>
+        <%
+       if(user == trade.author._id) {%>
+        <form>
+          <button class="trade-btn" type = "submit" formmethod = "GET" formaction = "/trades/<%= trade.id%>/edit">Edit</button>
+          <button class="trade-btn" type = "submit" formmethod = "POST" formaction = "/trades/<%= trade.id%>?_method=DELETE">Delete</button>
+       </form>
+          </div>
+          <%}if(user != trade.author._id){%>
+            <div>
+              <h3>Intrested in trading Product!?</h3>
+              <br>
+              <form >
+              <button class="trade-btn" type = "submit" name = response formmethod = "GET" formaction = "/trades/<%= trade.id%>/startTrading">Trade</button>
+              <%if(!watched){%>
+                  <button class="trade-btn" type = "submit" name = response formmethod = "POST" formaction = "/trades/<%= trade.id%>/watch">Watch</button>
+              <%}else{%>
+                  <button class="trade-btn" type = "submit" name = response formmethod = "POST" formaction = "/trades/<%= trade.id%>/unWatch?_method=delete">UnWatch</button>
+              </form>
+              <%}%>
+            </div>
+            <%}%>
+    
+    
+    <%- include('../partials/footer.ejs')%> 

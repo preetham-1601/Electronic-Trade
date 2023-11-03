@@ -1,0 +1,33 @@
+<%- include('../partials/header.ejs')%>
+
+
+<div class = "form-container">
+<h2>CREATE NEW TRADE</h2>
+  <form action = '/trades' method = 'POST'>
+    
+    <table>
+        <tr>
+            <td><label for="title" >Title</label></td>
+            <td><input type="text" id="title" name="title"  class = "fixed-width"></td>
+        </tr>
+        <tr><td class = "align-top"><label for="details">Details</label></td>
+            <td><textarea rows="5" id="details" name="details" class = "fixed-width"></textarea></td>
+        </tr>
+        <tr>
+            <td><label for="title" >Category</label></td>
+            <td><input type="text" id="category" name="category" class = "fixed-width"></td>
+        </tr>
+        <tr>
+            <td><label for="title" >Image link</label></td>
+            <td><input type="text" id="image" name="image"  class = "fixed-width"></td>
+        </tr>
+
+        </table>  
+
+        <button class="trade-btn" type="submit">Submit</button>
+       
+  </form>
+ 
+
+  </div>
+<%- include('../partials/footer.ejs')%>
